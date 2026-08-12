@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kent Slidev"
+  short_description: "Create concise, conversational Slidev decks"
+  default_prompt: "Use $kent-slidev to create or refine this presentation slide by slide."
