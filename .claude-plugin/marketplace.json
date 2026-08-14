@@ -1,0 +1,21 @@
+{
+  "name": "skills-set",
+  "description": "Kent's personal skills, distributed together as one installable plugin.",
+  "owner": {
+    "name": "Kent"
+  },
+  "plugins": [
+    {
+      "name": "skills-set",
+      "source": "./plugins/skills-set",
+      "description": "Install all of Kent's personal skills as one plugin.",
+      "author": {
+        "name": "Kent"
+      },
+      "homepage": "https://github.com/kentwelcome/skills-set",
+      "repository": "https://github.com/kentwelcome/skills-set",
+      "category": "Productivity",
+      "tags": ["personal-skills", "slidev", "workflow"]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "skills-set",
+  "version": "0.1.0",
+  "description": "Kent's personal skills for presentation work and turning session lessons into reusable workflows.",
+  "author": {
+    "name": "Kent"
+  },
+  "homepage": "https://github.com/kentwelcome/skills-set",
+  "repository": "https://github.com/kentwelcome/skills-set",
+  "keywords": ["personal-skills", "slidev", "workflow"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Kent's Skills Set",
+    "shortDescription": "Install Kent's personal Codex skills.",
+    "longDescription": "A skills-only plugin containing Kent's reusable presentation and session-to-skill workflows.",
+    "developerName": "Kent",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Create or refine a Slidev deck in Kent's working style.",
+      "Turn this session into a new or improved personal skill."
+    ]
+  }
+}

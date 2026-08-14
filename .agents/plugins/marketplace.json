@@ -1,0 +1,20 @@
+{
+  "name": "skills-set",
+  "interface": {
+    "displayName": "Skills Set"
+  },
+  "plugins": [
+    {
+      "name": "skills-set",
+      "source": {
+        "source": "local",
+        "path": "./plugins/skills-set"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

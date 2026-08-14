@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "skills-set",
+  "version": "0.1.0",
+  "description": "Kent's personal skills for presentation work and turning session lessons into reusable workflows.",
+  "author": {
+    "name": "Kent"
+  },
+  "homepage": "https://github.com/kentwelcome/skills-set",
+  "repository": "https://github.com/kentwelcome/skills-set",
+  "keywords": ["personal-skills", "slidev", "workflow"]
+}

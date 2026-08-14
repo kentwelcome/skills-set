@@ -1,28 +1,35 @@
 # Personal Skills
 
-This repository is the source of truth for Kent's personal agent skills.
+This repository is the source of truth for Kent's personal agent skills. The
+complete collection is distributed as one `skills-set` plugin for Claude Code
+and Codex.
 
 ## Layout
 
-Each skill lives in `skills/<skill-name>/` and contains a `SKILL.md` file.
-Optional agent metadata belongs under the skill directory, for example
-`skills/<skill-name>/agents/openai.yaml`.
+The plugin lives at `plugins/skills-set/`. Each canonical skill lives in
+`plugins/skills-set/skills/<skill-name>/` and contains a `SKILL.md` file.
+The top-level `skills` symlink preserves existing local paths.
 
-## Install a skill locally
+## Install all skills
 
-Expose a skill to Codex with a symlink:
+### Claude Code
 
-```sh
-ln -s "$(pwd)/skills/<skill-name>" ~/.codex/skills/<skill-name>
+```text
+/plugin marketplace add kentwelcome/skills-set
+/plugin install skills-set@skills-set
 ```
 
-Verify the link:
+Claude Code exposes plugin skills under the `skills-set` namespace, such as
+`/skills-set:kent-slidev`.
+
+### Codex
 
 ```sh
-readlink ~/.codex/skills/<skill-name>
+codex plugin marketplace add kentwelcome/skills-set
+codex plugin add skills-set@skills-set
 ```
 
 ## Skills
 
-- [`kent-slidev`](skills/kent-slidev/SKILL.md) — Create and refine Slidev presentations in Kent's preferred working style.
-- [`skillset-smith`](skills/skillset-smith/SKILL.md) — Create or update personal skills from the current session and open a pull request.
+- [`kent-slidev`](plugins/skills-set/skills/kent-slidev/SKILL.md) — Create and refine Slidev presentations in Kent's preferred working style.
+- [`skillset-smith`](plugins/skills-set/skills/skillset-smith/SKILL.md) — Create or update personal skills from the current session and open a pull request.

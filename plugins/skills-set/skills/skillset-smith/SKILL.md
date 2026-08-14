@@ -6,8 +6,8 @@ description: "Create or update Kent's personal Codex skills in the skills-set re
 # Skillset Smith
 
 Turn reusable lessons from the current session into a focused skill under
-`/Users/kent/GitHub/skills-set/skills/`. Treat the session as evidence, not as
-permission to invent missing requirements.
+`/Users/kent/GitHub/skills-set/plugins/skills-set/skills/`. Treat the session
+as evidence, not as permission to invent missing requirements.
 
 ## Start with the mode gate
 
@@ -81,7 +81,7 @@ adding a short disambiguator only when the branch already exists.
 2. Confirm two or three representative trigger prompts from the session. Ask
    for an example if the intended use is still ambiguous.
 3. Run the `skill-creator` initializer. Create the skill at
-   `skills/<skill-name>/`; do not hand-build the scaffold.
+   `plugins/skills-set/skills/<skill-name>/`; do not hand-build the scaffold.
 4. Write a concise `SKILL.md` using imperative instructions. Put all trigger
    information in the frontmatter description.
 5. Generate `agents/openai.yaml` from the completed skill. Include only the
@@ -94,10 +94,10 @@ adding a short disambiguator only when the branch already exists.
 ## Update an existing skill
 
 Whenever the user selects **update** or the agent recommends **update**, scan
-the live repository and show every directory under `skills/` that contains
-`SKILL.md` before asking for or naming a target. Display each skill's name and
-a one-line summary from its frontmatter description. Do not rely on a
-remembered list.
+the live repository and show every directory under
+`plugins/skills-set/skills/` that contains `SKILL.md` before asking for or
+naming a target. Display each skill's name and a one-line summary from its
+frontmatter description. Do not rely on a remembered list.
 
 Then:
 
@@ -121,7 +121,11 @@ Before publishing:
    explains both capability and triggers.
 4. Inspect the complete task diff and staged scope.
 5. Run `git diff --check`.
-6. If validation fails, fix the cause and rerun it. Never claim a check passed
+6. Bump the patch version in both
+   `plugins/skills-set/.codex-plugin/plugin.json` and
+   `plugins/skills-set/.claude-plugin/plugin.json`, keeping the versions equal.
+7. Validate the Codex plugin and the Claude plugin and marketplace manifests.
+8. If validation fails, fix the cause and rerun it. Never claim a check passed
    without observing the successful result.
 
 ## Publish the pull request
@@ -129,7 +133,8 @@ Before publishing:
 After the generated skill content passes validation, complete the routine PR
 workflow without asking for separate approval:
 
-1. Stage only task-related skill files and the top-level README when changed.
+1. Stage only task-related skill files, the synchronized plugin manifests, and
+   the top-level README when changed.
 2. Commit with a concise message, then push the task branch to this repository.
 3. Check whether the branch already has a pull request. Update that PR instead
    of creating a duplicate.
