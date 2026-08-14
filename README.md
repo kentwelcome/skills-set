@@ -25,3 +25,4 @@ readlink ~/.codex/skills/<skill-name>
 ## Skills
 
 - [`kent-slidev`](skills/kent-slidev/SKILL.md) — Create and refine Slidev presentations in Kent's preferred working style.
+- [`skillset-smith`](skills/skillset-smith/SKILL.md) — Create or update personal skills from the current session and open a pull request.

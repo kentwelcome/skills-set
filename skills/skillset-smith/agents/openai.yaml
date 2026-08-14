@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skillset Smith"
+  short_description: "Forge personal skills from session context"
+  default_prompt: "Use $skillset-smith to create or improve a personal skill from this session and open a pull request."
