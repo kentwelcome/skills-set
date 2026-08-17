@@ -1,0 +1,4 @@
+interface:
+  display_name: "Demo on PR"
+  short_description: "Screenshot a change running and embed it in the PR"
+  default_prompt: "Use $demo-on-pr to capture screenshots of this change and add them to the pull request description."
