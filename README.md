@@ -32,5 +32,6 @@ codex plugin add skills-set@skills-set
 ## Skills
 
 - [`demo-on-pr`](plugins/skills-set/skills/demo-on-pr/SKILL.md) — Screenshot a change actually running and embed the images in a GitHub pull request description.
+- [`drawing-ascii-diagrams`](plugins/skills-set/skills/drawing-ascii-diagrams/SKILL.md) — Draw ASCII flows, trees, tables, and boxes whose edges and connectors line up.
 - [`kent-slidev`](plugins/skills-set/skills/kent-slidev/SKILL.md) — Create and refine Slidev presentations in Kent's preferred working style.
 - [`skillset-smith`](plugins/skills-set/skills/skillset-smith/SKILL.md) — Create or update personal skills from the current session and open a pull request.

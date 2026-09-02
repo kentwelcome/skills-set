@@ -1,0 +1,4 @@
+interface:
+  display_name: "Drawing ASCII Diagrams"
+  short_description: "Draw an ASCII flow, tree, table, or box that lines up"
+  default_prompt: "Use $drawing-ascii-diagrams to explain this with an ASCII diagram."
