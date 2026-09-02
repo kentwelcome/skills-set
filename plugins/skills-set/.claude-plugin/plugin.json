@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "skills-set",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Kent's personal skills for presentation work and turning session lessons into reusable workflows.",
   "author": {
     "name": "Kent"
