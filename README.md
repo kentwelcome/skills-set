@@ -82,9 +82,9 @@ Each run resolves the **latest stable published release** of
 [`spacedock-dev/behavior-diff`](https://github.com/spacedock-dev/behavior-diff),
 then freezes its full commit SHA through the action's `core-ref` input. No bundled
 core fallback is used. Prereleases and unreleased `main` commits are excluded.
-The wrapper action is separately SHA-pinned to v0.1.2. Tracking latest core releases
-explicitly trusts new upstream executable code; inspect the resolved version in
-the run summary before approving execution.
+The wrapper action follows the moving `v0.1` tag, including beta patch releases.
+Tracking wrapper and core releases explicitly trusts new upstream executable code;
+inspect the resolved core version in the run summary before approving execution.
 
 Execution uses the protected `behavior-diff` environment. Store a
 `CLAUDE_CODE_OAUTH_TOKEN` environment secret there, generated with `claude setup-token`,

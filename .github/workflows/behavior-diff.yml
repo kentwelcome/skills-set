@@ -65,8 +65,8 @@ jobs:
           printf 'sha=%s\n' "$sha" >> "$GITHUB_OUTPUT"
           printf 'Behavior Diff core: %s (%s)\n' "$tag" "$sha" >> "$GITHUB_STEP_SUMMARY"
       - name: Prepare comparisons
-        # behavior-diff-action v0.1.2; core version is resolved independently above.
-        uses: spacedock-dev/behavior-diff-action@32f1bc3bf8c8a2588a0cca5aca44d9cee4de7b93
+        # Follow wrapper patch releases; core version is resolved independently above.
+        uses: spacedock-dev/behavior-diff-action@v0.1
         id: prepare
         with:
           mode: prepare
@@ -94,7 +94,7 @@ jobs:
       matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
     steps:
       - name: Compare instruction behavior
-        uses: spacedock-dev/behavior-diff-action@32f1bc3bf8c8a2588a0cca5aca44d9cee4de7b93
+        uses: spacedock-dev/behavior-diff-action@v0.1
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         with:
@@ -125,7 +125,7 @@ jobs:
       matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
     steps:
       - name: Publish comparison evidence
-        uses: spacedock-dev/behavior-diff-action@32f1bc3bf8c8a2588a0cca5aca44d9cee4de7b93
+        uses: spacedock-dev/behavior-diff-action@v0.1
         with:
           mode: publish
           selection: ${{ toJSON(matrix) }}
