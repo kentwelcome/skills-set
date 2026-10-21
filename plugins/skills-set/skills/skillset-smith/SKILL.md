@@ -6,7 +6,7 @@ description: "Create or update Kent's personal Codex skills in the skills-set re
 # Skillset Smith
 
 Turn reusable lessons from the current session into a focused skill under
-`/Users/kent/GitHub/skills-set/plugins/skills-set/skills/`. Treat the session
+`plugins/skills-set/skills/` in the user's local skills-set checkout. Treat the session
 as evidence, not as permission to invent missing requirements.
 
 ## Start with the mode gate
@@ -53,14 +53,15 @@ Extract only durable, reusable evidence:
 
 Prefer the user's latest explicit decision when the session contains a
 reversal. Separate observed facts from inference, and ask the user to confirm
-any inference that would materially change the skill. Do not save secrets,
-transient identifiers, or incidental project details unless they are required
-for the reusable workflow.
+any inference that would materially change the skill. Never save secrets,
+session identifiers, transcript excerpts, private URLs, or machine-specific paths
+in the public skill. Generalize necessary examples and keep personal configuration local.
 
 ## Prepare the repository
 
-1. Work in `/Users/kent/GitHub/skills-set` and read applicable `AGENTS.md`
-   instructions.
+1. Locate the user's local skills-set checkout from the current workspace or an
+   explicitly supplied path; ask for its location only if it cannot be resolved.
+   Work from that repository root and follow its applicable instructions.
 2. Inspect `git status`, the current branch, the remote, and existing pull
    requests before editing.
 3. Refresh the current default branch. Create a task branch; never commit the
